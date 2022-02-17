@@ -9,14 +9,15 @@ const Select = ({ label, value, onChange, children }) => {
   const displayedValue = getDisplayedValue(value, children);
 
   return (
-    <Wrapper value={value} onChange={onChange} size='1'>
+    <CustomSelect value={value} onChange={onChange} size='1'>
       {children}
-      
-    </Wrapper>
+
+    </CustomSelect>
   );
 };
 
-const Wrapper = styled.select`
+const CustomSelect = styled.select`
+  -webkit-appearance: none;
   font-size: 1rem;
   background-color: ${COLORS.transparentGray15};
   border: none;
